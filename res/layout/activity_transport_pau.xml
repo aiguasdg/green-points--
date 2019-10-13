@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TransportPau">
+
+    <ImageButton
+        android:id="@+id/ibcar"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/car"
+        app:layout_constraintBottom_toTopOf="@+id/ibmoto"
+        app:layout_constraintEnd_toStartOf="@+id/ibbike"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ibbike"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:longClickable="false"
+        android:scaleType="fitCenter"
+        android:src="@drawable/bike"
+        app:layout_constraintBottom_toTopOf="@+id/ibplane"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ibcar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ibmoto"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/moto"
+        app:layout_constraintBottom_toTopOf="@+id/ibscoot"
+        app:layout_constraintEnd_toStartOf="@+id/ibplane"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ibcar" />
+
+    <ImageButton
+        android:id="@+id/ibscoot"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/scoot"
+        app:layout_constraintBottom_toTopOf="@+id/ibboat"
+        app:layout_constraintEnd_toStartOf="@+id/ibtrain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ibmoto" />
+
+    <ImageButton
+        android:id="@+id/ibtrain"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/train"
+        app:layout_constraintBottom_toTopOf="@+id/ibwalk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ibscoot"
+        app:layout_constraintTop_toBottomOf="@+id/ibplane" />
+
+    <ImageButton
+        android:id="@+id/ibplane"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/plane"
+        app:layout_constraintBottom_toTopOf="@+id/ibtrain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ibmoto"
+        app:layout_constraintTop_toBottomOf="@+id/ibbike" />
+
+    <ImageButton
+        android:id="@+id/ibboat"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/boat"
+        app:layout_constraintTop_toBottomOf="@+id/ibscoot"
+        app:layout_constraintEnd_toStartOf="@+id/ibwalk"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ibwalk"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/walk"
+        app:layout_constraintTop_toBottomOf="@+id/ibtrain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ibboat"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_begin="83dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/ibwalk"
+        app:layout_constraintTop_toBottomOf="@+id/ibboat"
+        tools:text="5" />
+
+    <TextView
+        android:id="@+id/AlertTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Alert Received!"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/ibwalk"
+        app:layout_constraintTop_toBottomOf="@+id/ibboat"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
